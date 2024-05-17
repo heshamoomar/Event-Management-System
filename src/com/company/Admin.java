@@ -1,20 +1,20 @@
 package com.company;
 
-public class Manager extends Person /*implements Display*/ {
+public class Admin extends Person /*implements Display*/ {
 
     private
         String username;
         String passwd;
 
-    public Manager() {
+    public Admin() {
     }
 
-//    public Manager(String username, String passwd) {
+//    public Admin(String username, String passwd) {
 //        this.username = username;
 //        this.passwd = passwd;
 //    }
 
-    public Manager(String fullName, String address, String email, long phoneNumber, Gender sex, String username, String passwd) {
+    public Admin(String fullName, String address, String email, long phoneNumber, Gender sex, String username, String passwd) {
         super(fullName, address, email, phoneNumber, sex);
         this.username = username;
         this.passwd = passwd;
@@ -27,7 +27,7 @@ public class Manager extends Person /*implements Display*/ {
 
 //    @Override
 //    public String toString() {
-//        return "Manager{" +
+//        return "Admin{" +
 //                "username='" + username + '\'' +
 //                ", passwd='" + passwd + '\'' +
 //                '}';
@@ -35,7 +35,7 @@ public class Manager extends Person /*implements Display*/ {
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Admin{" +
                 "username='" + username + '\'' +
                 ", passwd='" + passwd + '\'' +
                 ", fullName='" + fullName + '\'' +

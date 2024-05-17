@@ -1,6 +1,6 @@
 package com.company;
 
-public class EventOrganizers extends Person /*implements  Display*/ {
+public class Librarian extends Person /*implements  Display*/ {
 
     private
         int id;
@@ -8,17 +8,17 @@ public class EventOrganizers extends Person /*implements  Display*/ {
         double workedHours;
         double netSalary = (salaryPerHour*workedHours);
 
-    public EventOrganizers() {
+    public Librarian() {
     }
 
-//    public EventOrganizers(int id, double salaryPerHour, double workedHours) {
+//    public Librarian(int id, double salaryPerHour, double workedHours) {
 //        this.id = id;
 //        this.salaryPerHour = salaryPerHour;
 //        this.workedHours = workedHours;
 //    }
 
-    public EventOrganizers(String fullName, String address, String email, long phoneNumber, Gender sex,
-                           int id, double salaryPerHour, double workedHours) {
+    public Librarian(String fullName, String address, String email, long phoneNumber, Gender sex,
+                     int id, double salaryPerHour, double workedHours) {
         super(fullName, address, email, phoneNumber, sex);
         this.id = id;
         this.salaryPerHour = salaryPerHour;
@@ -32,7 +32,7 @@ public class EventOrganizers extends Person /*implements  Display*/ {
 
     @Override
     public String toString() {
-        return "EventOrganizers{" +
+        return "Librarian{" +
                 "id=" + id +
                 ", salaryPerHour=" + salaryPerHour +
                 ", workedHours=" + workedHours +

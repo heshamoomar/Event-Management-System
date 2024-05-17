@@ -1,17 +1,19 @@
 package com.company;
 
-public class Participant extends Person /*implements Display*/{
+import java.util.ArrayList;
+
+public class Member extends Person /*implements Display*/{
 
     private String participantCollege;
 
-    public Participant() {
+    public Member() {
     }
 
-//    public Participant(String participantCollege) {
+//    public Member(String participantCollege) {
 //        this.participantCollege = participantCollege;
 //    }
 
-    public Participant(String fullName, String address, String email, long phoneNumber, Gender sex, String participantCollege) {
+    public Member(String fullName, String address, String email, long phoneNumber, Gender sex, String participantCollege) {
         super(fullName, address, email, phoneNumber, sex);
         this.participantCollege = participantCollege;
     }
@@ -21,9 +23,25 @@ public class Participant extends Person /*implements Display*/{
         System.out.println(this);
     }
 
+    private ArrayList<Loan> loans;
+
+    public Member(String name, String address, String email, long phoneNumber) {
+        // Existing constructor code...
+        this.loans = new ArrayList<>();
+    }
+
+    public void addLoan(Loan loan) {
+        loans.add(loan);
+    }
+
+    public void removeLoan(Loan loan) {
+        loans.remove(loan);
+    }
+
+
     @Override
     public String toString() {
-        return "Participant{" +
+        return "Member{" +
                 "participantCollege='" + participantCollege + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", address='" + address + '\'' +
@@ -35,7 +53,7 @@ public class Participant extends Person /*implements Display*/{
 
 //    @Override
 //    public String toString() {
-//        return "Participant{" +
+//        return "Member{" +
 //                "participantCollege='" + participantCollege + '\'' +
 //                '}';
 //    }
